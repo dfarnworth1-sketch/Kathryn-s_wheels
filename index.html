@@ -602,7 +602,22 @@
            Open Document
         </a>
     `;
+} else if (resource.type === "doc") {
 
+
+} else if (resource.type === "image") {
+
+    card.innerHTML = `
+        <h2>🖼️ ${resource.title}</h2>
+
+        <img
+            src="${resource.url}"
+            alt="${resource.title}"
+            style="width:100%; max-width:800px; display:block; margin:0 auto; border-radius:12px;"
+        >
+    `;
+
+} else {
 } else {
 
     card.innerHTML = `
