@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dave's ADI Toolkit</title>
+  <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="icon.png">
+ <style> 
+    /* ===== PROFESSIONAL APPEARANCE UPDATE ===== */
+
+    body {
+      background:
+        linear-gradient(180deg, #0f172a 0%, #172554 100%);
+      min-height: 100vh;
+    }
+
+    header {
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
+    }
+
+    header h1 {
+      color: #0f172a;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      line-height: 1.5;
+    }
+
+    .category-card,
+    .topic-button,
+    .back-button,
+    .resource-link {
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+    }
+
+    .category-card:hover,
+    .topic-button:hover,
+    .back-button:hover,
+    .resource-link:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .category-card:active,
+    .topic-button:active,
+    .back-button:active,
+    .resource-link:active {
+      transform: translateY(0);
+    }
+
+    .category-card {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .topic-button {
+      box-shadow: 0 7px 18px rgba(37, 99, 235, 0.22);
+    }
+
+    .topic-button.empty {
+      opacity: 0.82;
+      box-shadow: none;
+    }
+
+    .page-panel {
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .page-heading {
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+      color: #0f172a;
+    }
+
+    .video-card {
+      border: 1px solid #dbe3ee;
+      background: white;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+    }
+
+    .video-card h2 {
+      color: #1e293b;
+      line-height: 1.3;
+    }
+
+    .video {
+      box-shadow: 0 5px 16px rgba(15, 23, 42, 0.22);
+    }
+
+    .resource-link {
+      border: none;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Red buttons for PDF files */
+    .resource-link[href$=".pdf"] {
+      background: #dc2626;
+      box-shadow: 0 6px 16px rgba(220, 38, 38, 0.25);
+    }
+
+    .resource-link[href$=".pdf"]:hover {
+      background: #b91c1c;
+    }
+
+    /* Blue buttons for Word documents */
+    .resource-link[href$=".docx"],
+    .resource-link[href$=".doc"] {
+      background: #2563eb;
+    }
+
+    footer {
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 20px 16px;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      .page-panel {
+        padding: 17px;
+      }
+
+      .page-heading {
+        font-size: 28px;
+      }
+
+      .video-card {
+        padding: 16px;
+      }
+
+      .video-card h2 {
+        font-size: 21px;
+      }
+
+      .resource-link {
+        padding: 15px;
+        font-size: 17px;
+      }
+    }
+
+    /* ===== END APPEARANCE UPDATE ===== */
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      background: #0f172a;
+      color: #0f172a;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    header {
+      margin-bottom: 18px;
+      padding: 24px;
+      border-radius: 22px;
+      background: white;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 42px;
+    }
+
+    header p {
+      margin: 0;
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .category-grid,
+    .topic-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .category-card {
+      min-height: 130px;
+      padding: 22px;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    .category-card:nth-child(8n + 1) {
+      background: #2563eb;
+    }
+
+    .category-card:nth-child(8n + 2) {
+      background: #059669;
+    }
+
+    .category-card:nth-child(8n + 3) {
+      background: #d97706;
+    }
+
+    .category-card:nth-child(8n + 4) {
+      background: #7c3aed;
+    }
+
+    .category-card:nth-child(8n + 5) {
+      background: #0891b2;
+    }
+
+    .category-card:nth-child(8n + 6) {
+      background: #db2777;
+    }
+
+    .category-card:nth-child(8n + 7) {
+      background: #475569;
+    }
+
+    .category-card:nth-child(8n + 8) {
+      background: #6d28d9;
+    }
+
+    .screen {
+      display: none;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    .page-panel {
+      padding: 22px;
+      border-radius: 22px;
+      background: white;
+    }
+
+    .page-heading {
+      margin: 0 0 18px;
+      font-size: 34px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 11px;
+      background: #475569;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .topic-button {
+      min-height: 84px;
+      padding: 18px;
+      border: none;
+      border-radius: 15px;
+      background: #2563eb;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .topic-button.empty {
+      background: #64748b;
+    }
+
+    .video-card {
+      margin-bottom: 22px;
+      padding: 20px;
+      border-radius: 18px;
+      background: #f1f5f9;
+    }
+
+    .video-card h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      border-radius: 14px;
+      background: black;
+    }
+
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .resource-link {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .resource-link:hover {
+      background: #1d4ed8;
+    }
+
+    .empty-message {
+      padding: 25px;
+      border-radius: 16px;
+      background: #f1f5f9;
+      color: #64748b;
+      text-align: center;
+      font-size: 19px;
+    }
+
+    footer {
+      margin-top: 18px;
+      padding: 17px;
+      border-radius: 18px;
+      background: white;
+      color: #64748b;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 11px;
+      }
+
+      header h1 {
+        font-size: 34px;
+      }
+
+      .category-grid,
+      .topic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-card {
+        min-height: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section
+      id="home-screen"
+      class="screen active"
+    >
+
+      <header>
+        <h1>Dave's ADI Toolkit</h1>
+
+        <p>
+          Teaching videos and resources for use during lessons.
+        </p>
+      </header>
+
+      <main
+        id="category-grid"
+        class="category-grid"
+      ></main>
+
+      <footer>
+        Choose a category to see its subjects.
+      </footer>
+
+    </section>
+
+
+    <section
+      id="category-screen"
+      class="screen"
+    >
+
+      <button
+        class="back-button"
+        onclick="showHome()"
+      >
+        ← Back to Dave's ADI Toolkit
+      </button>
+
+      <div class="page-panel">
+
+        <h1
+          id="category-heading"
+          class="page-heading"
+        ></h1>
+
+        <div
+          id="topic-grid"
+          class="topic-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="topic-screen"
+      class="screen"
+    >
+
+      <button
+        class="back-button"
+        onclick="showCurrentCategory()"
+      >
+        ← Back to subjects
+      </button>
+
+      <div class="page-panel">
+
+        <h1
+          id="topic-heading"
+          class="page-heading"
+        ></h1>
+
+        <div id="video-list"></div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script src="videos.js?v=3"></script>
+
+  <script>
+    let currentCategoryIndex = 0;
+
+    function hideAllScreens() {
+      document
+        .querySelectorAll(".screen")
+        .forEach(function (screen) {
+          screen.classList.remove("active");
+        });
+    }
+
+    function showHome() {
+      hideAllScreens();
+
+      document
+        .getElementById("home-screen")
+        .classList.add("active");
+
+      window.scrollTo(0, 0);
+    }
+
+    function showCategory(categoryIndex) {
+      currentCategoryIndex = categoryIndex;
+
+      const category = toolkitData[categoryIndex];
+
+      document.getElementById(
+        "category-heading"
+      ).textContent =
+        category.icon + " " + category.name;
+
+      const topicGrid =
+        document.getElementById("topic-grid");
+
+      topicGrid.innerHTML = "";
+
+      category.topics.forEach(function (topic, topicIndex) {
+        const button = document.createElement("button");
+
+        button.className = "topic-button";
+
+        if (!topic.videos || topic.videos.length === 0) {
+          button.classList.add("empty");
+        }
+
+        button.textContent = topic.name;
+
+        button.onclick = function () {
+          showTopic(categoryIndex, topicIndex);
+        };
+
+        topicGrid.appendChild(button);
+      });
+
+      hideAllScreens();
+
+      document
+        .getElementById("category-screen")
+        .classList.add("active");
+
+      window.scrollTo(0, 0);
+    }
+
+    function showCurrentCategory() {
+      showCategory(currentCategoryIndex);
+    }
+
+    function showTopic(categoryIndex, topicIndex) {
+      currentCategoryIndex = categoryIndex;
+
+      const topic =
+        toolkitData[categoryIndex].topics[topicIndex];
+
+      document.getElementById(
+        "topic-heading"
+      ).textContent = topic.name;
+
+      const videoList =
+        document.getElementById("video-list");
+
+      videoList.innerHTML = "";
+
+      if (!topic.videos || topic.videos.length === 0) {
+        videoList.innerHTML = `
+          <div class="empty-message">
+            No videos or resources have been added yet.
+          </div>
+        `;
+      } else {
+        topic.videos.forEach(function (resource) {
+          const card = document.createElement("div");
+
+          card.className = "video-card";
+
+          if (resource.type === "pdf") {
+
+    card.innerHTML = `
+        <h2>📄 ${resource.title}</h2>
+
+        <a class="resource-link"
+           href="${resource.url}"
+           target="_blank">
+           Open PDF
+        </a>
+    `;
+
+} else if (resource.type === "doc") {
+
+    card.innerHTML = `
+        <h2>📄 ${resource.title}</h2>
+
+        <a class="resource-link"
+           href="${resource.url}"
+           target="_blank">
+           Open Document
+        </a>
+    `;
+
+} else {
+
+    card.innerHTML = `
+        <h2>${resource.title}</h2>
+
+        <div class="video">
+            <iframe
+                src="https://www.youtube.com/embed/${resource.id}"
+                title="${resource.title}"
+                allowfullscreen>
+            </iframe>
+        </div>
+    `;
+}
+          videoList.appendChild(card);
+        });
+      }
+
+      hideAllScreens();
+
+      document
+        .getElementById("topic-screen")
+        .classList.add("active");
+
+      window.scrollTo(0, 0);
+    }
+
+    function buildHomeScreen() {
+      const categoryGrid =
+        document.getElementById("category-grid");
+
+      categoryGrid.innerHTML = "";
+
+      toolkitData.forEach(function (category, index) {
+        const button = document.createElement("button");
+
+        button.className = "category-card";
+
+        button.textContent =
+          category.icon + " " + category.name;
+
+        button.onclick = function () {
+          showCategory(index);
+        };
+
+        categoryGrid.appendChild(button);
+      });
+    }
+
+    buildHomeScreen();
+  </script>
+</body>
+</html>
