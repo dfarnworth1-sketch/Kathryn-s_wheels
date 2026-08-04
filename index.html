@@ -561,7 +561,19 @@
             No videos or resources have been added yet.
           </div>
         `;
-      } else {
+     } else if (resource.type === "image") {
+
+  card.innerHTML = `
+    <h2>🖼️ ${resource.title}</h2>
+
+    <img
+      src="${resource.url}"
+      alt="${resource.title}"
+      style="width:100%; max-width:800px; display:block; margin:0 auto; border-radius:12px;"
+    >
+  `;
+
+} else {
         topic.videos.forEach(function (resource) {
           const card = document.createElement("div");
 
