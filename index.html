@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Kathryn's ADI Toolkit</title>
+  <title>Dave's ADI Toolkit</title>
   <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -395,7 +395,7 @@
     >
 
       <header>
-        <h1>Kathryn's ADI Toolkit</h1>
+        <h1>Dave's ADI Toolkit</h1>
 
         <p>
           Teaching videos and resources for use during lessons.
@@ -423,7 +423,7 @@
         class="back-button"
         onclick="showHome()"
       >
-        ← Back to Kathryn's ADI Toolkit
+        ← Back to Dave's ADI Toolkit
       </button>
 
       <div class="page-panel">
@@ -561,19 +561,7 @@
             No videos or resources have been added yet.
           </div>
         `;
-     } else if (resource.type === "image") {
-
-  card.innerHTML = `
-    <h2>🖼️ ${resource.title}</h2>
-
-    <img
-      src="${resource.url}"
-      alt="${resource.title}"
-      style="width:100%; max-width:800px; display:block; margin:0 auto; border-radius:12px;"
-    >
-  `;
-
-} else {
+      } else {
         topic.videos.forEach(function (resource) {
           const card = document.createElement("div");
 
@@ -602,17 +590,6 @@
            Open Document
         </a>
     `;
-} else if (resource.type === "doc") {
-
-  card.innerHTML = `
-    <h2>📄 ${resource.title}</h2>
-
-    <a class="resource-link"
-       href="${resource.url}"
-       target="_blank">
-       Open Document
-    </a>
-  `;
 
 } else if (resource.type === "image") {
 
