@@ -267,13 +267,20 @@ const toolkitData = [
           {
             title: "How Many Lessons Are Needed to Pass?",
             id: "YwgzdI03nJk"
-          }
+           }
         ]
-      }
-    ]
+      },
+      {
+  name: "Kettering – Tricky Areas",
+  videos: []
+},
+{
+  name: "Wellingborough – Tricky Areas",
+  videos: []
+ }
+   ]
   },
-
-  {
+    {
     name: "Emergency Situations",
     icon: "🚨",
     topics: [
