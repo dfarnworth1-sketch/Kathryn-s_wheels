@@ -49,6 +49,11 @@ const toolkitData = [
       {
         name: "Brakes",
         videos: [
+         {
+  title: "Progressive Braking",
+  type: "image",
+  url: "Braking.jpg"
+}, 
           { title: "Using the Brakes", id: "Jl9qTbZH4tM" }
         ]
       },
