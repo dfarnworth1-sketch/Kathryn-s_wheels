@@ -325,6 +325,11 @@ const toolkitData = [
         title: "Wellingborough Crossroads",
         type: "image",
         url: "Wellingborough crossroads.jpg"
+   },
+{
+    title: "Hardwater Crossing",
+    type: "image",
+    url: "Hardwater crossing.jpg"
     }
 ]
   },
