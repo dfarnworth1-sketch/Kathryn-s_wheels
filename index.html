@@ -603,7 +603,22 @@
     >
   `;
 
-} else {
+}
+
+else if (resource.type === "link") {
+
+    card.innerHTML = `
+        <h2>🔗 ${resource.title}</h2>
+        <p>
+            <a href="${resource.url}" target="_blank">
+                Open Website
+            </a>
+        </p>
+    `;
+
+}
+
+else {
 
     card.innerHTML = `
         <h2>${resource.title}</h2>
