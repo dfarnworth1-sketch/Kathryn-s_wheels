@@ -277,9 +277,28 @@ const toolkitData = [
       },
       {
   name: "Kettering – Tricky Areas",
-  videos: []
+  videos: [{
+  title: "Double Roundabout 1",
+  type: "image",
+  url: "Double RB 1.jpg"
 },
 {
+  title: "Double Roundabout 2",
+  type: "image",
+  url: "Double RB 2.jpg"
+},
+{
+  title: "Double Roundabout 3",
+  type: "image",
+  url: "Double RB 3.jpg"
+},
+{
+  title: "Double Roundabout 4",
+  type: "image",
+  url: "Double RB 4.jpg"
+},
+]           
+},
   name: "Wellingborough – Tricky Areas",
   videos: []
  }
