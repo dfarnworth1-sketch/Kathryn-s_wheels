@@ -295,6 +295,11 @@ const toolkitData = [
   url: "Double RB 1.jpg"
 },
 {
+    title: "View on Google Maps",
+    type: "link",
+    url: "https://maps.app.goo.gl/XW14MzfB24HoAaiX7?g_st=ac"
+},
+{
   title: "Double Roundabout (3 lanes on approach)",
   type: "image",
   url: "Double RB 2 (3 lanes on approach).jpg"
