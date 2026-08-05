@@ -32,15 +32,6 @@ const toolkitData = [
         ]
       },
       {
-        name: "Driving a Manual Car",
-        videos: [
-          {
-            title: "11 Things You Must Not Do When Driving a Manual Car",
-            id: "8oOskLcT_YE"
-          }
-        ]
-      },
-      {
         name: "Steering",
         videos: [
           { title: "Steering", id: "R8zhtcN_4u4" }
