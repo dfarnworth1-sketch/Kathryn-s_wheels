@@ -332,7 +332,7 @@ const toolkitData = [
            {
     title: "📍 Open in Google Maps",
     type: "link",
-    url: "PASTE THE BROUGHTON GOOGLE MAPS LINK HERE"
+    url: "https://maps.app.goo.gl/kEVR1kQT5GPNn9wP7?g_st=ac"
 },
   {
     title: "A14 - J7 Roundabout",
