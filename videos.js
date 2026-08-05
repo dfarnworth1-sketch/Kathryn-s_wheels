@@ -283,7 +283,7 @@ const toolkitData = [
   url: "Double RB 1.jpg"
 },
 {
-  title: "Double Roundabout 2",
+  title: "Double Roundabout 2 (3 lanes on approach)",
   type: "image",
   url: "Double RB 2.jpg"
 },
