@@ -296,10 +296,15 @@ const toolkitData = [
   title: "Double Roundabout ",
   type: "image",
   url: "Double RB 4.jpg"
-}           
-]           
 },
-     { 
+  {
+    title: "Broughton",
+    type: "image",
+    url: "Broughton.jpg"
+ }
+   ]
+  },
+    {
   name: "Wellingborough – Tricky Areas",
   videos: []
  }
