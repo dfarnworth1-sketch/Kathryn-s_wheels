@@ -278,22 +278,22 @@ const toolkitData = [
       {
   name: "Kettering – Tricky Areas",
   videos: [{
-  title: "Double Roundabout 1",
+  title: "Double Roundabout ",
   type: "image",
   url: "Double RB 1.jpg"
 },
 {
-  title: "Double Roundabout 2 (3 lanes on approach)",
+  title: "Double Roundabout (3 lanes on approach)",
   type: "image",
   url: "Double RB 2 (3 lanes on approach).jpg"
 },
 {
-  title: "Double Roundabout 3",
+  title: "Double Roundabout ",
   type: "image",
   url: "Double RB 3.jpg"
 },
 {
-  title: "Double Roundabout 4",
+  title: "Double Roundabout ",
   type: "image",
   url: "Double RB 4.jpg"
 }           
