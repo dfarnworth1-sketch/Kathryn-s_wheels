@@ -329,6 +329,11 @@ const toolkitData = [
     type: "image",
     url: "Broughton.jpg"
 },
+           {
+    title: "📍 Open in Google Maps",
+    type: "link",
+    url: "PASTE THE BROUGHTON GOOGLE MAPS LINK HERE"
+},
   {
     title: "A14 - J7 Roundabout",
     type: "image",
