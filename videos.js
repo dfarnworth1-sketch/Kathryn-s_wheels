@@ -480,7 +480,7 @@ const toolkitData = [
         ]
       },
       {
-       name: "Standards Check",
+       name: "ADI Training videos",
         videos: [{
     title: "Standards Check - Live Training",
     id: "y5AFELcGlDI"
