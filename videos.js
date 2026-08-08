@@ -2,7 +2,7 @@
 const toolkitData = [
   {
     name: "Vehicle Controls",
-    icon: "🚗",
+    icon: '<i class="fa-solid fa-car"></i>',
     topics:  [
       {
         name: "Cockpit Drill",
@@ -26,55 +26,58 @@ const toolkitData = [
       },
       {
         name: "Gears",
-        videos: [{ title: "Ultimate Guide to Gears", id: "w8RfEyt7Stk"},
-                 { title: "Gear and Steer", id: "mOr5Gqx6ZoM" },
-                 { title: "Why Does My Car Jerk When Changing Gear?", id: "Ifn0OI3v7lc" },
+        videos: [
+          { title: "Ultimate Guide to Gears", id: "w8RfEyt7Stk"},
+          { title: "Gear and Steer", id: "mOr5Gqx6ZoM" },
+          { title: "Why Does My Car Jerk When Changing Gear?", id: "Ifn0OI3v7lc" },
           { title: "Using the Gears", id: "A4rs09AKBc8" },
           { title: "Tips For Smoother Gear Changing", id: "oM25BCDVHSw" }
-          
-          
         ]
       },
       {
         name: "Steering",
-        videos: [{
-    title: "Ultimate Guide to Steering",
-    id: "VxtyM11NJlc"
-},
+        videos: [
+          {
+            title: "Ultimate Guide to Steering",
+            id: "VxtyM11NJlc"
+          },
           { title: "How to Steer", id: "R8zhtcN_4u4" }
         ]
       },
       {
         name: "Signals",
-        videos: [{
-  title: "Ultimate Guide to Signals",
-  id: "fIuVFr6FuSQ"
-}
+        videos: [
+          {
+            title: "Ultimate Guide to Signals",
+            id: "fIuVFr6FuSQ"
+          }
         ]
       },
       { 
         name: "Brakes",
         videos: [
           {
-  title: "Progressive Braking",
-  type: "image",
-  url: "Braking.jpg"
-},
+            title: "Progressive Braking",
+            type: "image",
+            url: "Braking.jpg"
+          },
           { title: "Clutch or Brake First", id: "Jl9qTbZH4tM" }
         ]
-      },
-     ]
-     }, 
-     {
+      }
+    ]
+  }, 
+
+  {
     name: "Moving Off and Stopping",
-    icon: "🚙",
+    icon: '<i class="fa-solid fa-car-side"></i>',
     topics: [
       {
         name: "Moving Off and Stopping",
-        videos: [{
-    title: "Ultimate Guide to Moving Off and Stopping",
-    id: "D1Gt_X-oyU0"
-},
+        videos: [
+          {
+            title: "Ultimate Guide to Moving Off and Stopping",
+            id: "D1Gt_X-oyU0"
+          },
           { title: "Moving Off and Stopping", id: "D1Gt_X-oyU0" },
           {
             title: "Avoiding and Recovering from a Stall",
@@ -98,11 +101,13 @@ const toolkitData = [
       {
         name: "Observation and Planning",
         videos: [
-           { title: "Blind Spots", id: "2cr5A_R87iU" },
+          { title: "Blind Spots", id: "2cr5A_R87iU" },
           { title: "Selective Attention Test", id: "vJG698U2Mvo" },
           { title: "Observation and Planning", id: "DJcAgnBFRds" },
-    { title: "How to Deal with Cyclists",
-    id: "UPN_XvaYU2k"}
+          { 
+            title: "How to Deal with Cyclists",
+            id: "UPN_XvaYU2k"
+          }
         ]
       }
     ]
@@ -110,18 +115,18 @@ const toolkitData = [
 
   {
     name: "Junctions",
-    icon: "🚦",
+    icon: '<i class="fa-solid fa-code-branch"></i>',
     topics: [
       {
         name: "Junctions",
-        videos: [ { title: "Junctions – Ultimate Guide To Junctions", id: "JFs5yEushSg" },
+        videos: [
+          { title: "Junctions – Ultimate Guide To Junctions", id: "JFs5yEushSg" },
           { title: "Junctions and Turns Made Easy", id: "EJVxCsRiyOw" },
           { title: "Junctions – Video 2", id: "HkCyv2_ch6M" },
           { title: "Junctions – Video 3", id: "MXUn-EYPpkA" },
           { title: "Junctions – Video 4", id: "Q8llvZla94Y" },
           { title: "Junctions – Video 5", id: "OjM5yzCFDYQ" },
           { title: "Junctions – Video 6", id: "GUocIPsXbcQ" },
-         
           { title: "Roundabouts and Junctions", id: "IqNW0IrOjzE" }
         ]
       },
@@ -129,45 +134,44 @@ const toolkitData = [
         name: "Positioning",
         videos: [
           { title: "Positioning at Junctions", id: "WvDiRRjKWdw" },
-        
-        { title: "Road Positioning", id: "dR1ccDljtmM" },
+          { title: "Road Positioning", id: "dR1ccDljtmM" },
           {
             title: "Judging Clearance from Parked Cars",
             id: "tIo8Cv7lY0c"
           },
           { title: "Positioning – Video 3", id: "E_YE2NbjAFU" }
-      
-    ]
+        ]
       }
     ]
   },
 
   {
     name: "Roundabouts",
-    icon: "🔄",
+    icon: '<i class="fa-solid fa-arrows-rotate"></i>',
     topics: [
       {
         name: "Roundabouts",
-       videos: [{
-    title: "Ultimate Guide to Roundabouts",
-    id: "1AHBhWsfAmI"
-},
-    {
-        title: "Ultimate Guide to Multi Lane Roundabouts",
-        id: "A2rrrcM4GH4"
-    },
-    { title: "Roundabouts", id: "koK_a4KYs-E" },
-    {
-        title: "Double Mini and Magic Roundabouts",
-        id: "Bup0xALjAVs"
-    },
-    {
-        title: "Did you Know This About Road Signs",
-        id: "yYWlP4RPFEY"
-    },
-    { title: "Spiral Roundabouts - Which Lane", id: "6WgewaIleag" },
-    { title: "Which Exit Lane", id: "nAyVtw8Agu0" },
-    { title: "Spiral Roundabouts", id: "1vmAw74Eags" }
+        videos: [
+          {
+            title: "Ultimate Guide to Roundabouts",
+            id: "1AHBhWsfAmI"
+          },
+          {
+            title: "Ultimate Guide to Multi Lane Roundabouts",
+            id: "A2rrrcM4GH4"
+          },
+          { title: "Roundabouts", id: "koK_a4KYs-E" },
+          {
+            title: "Double Mini and Magic Roundabouts",
+            id: "Bup0xALjAVs"
+          },
+          {
+            title: "Did you Know This About Road Signs",
+            id: "yYWlP4RPFEY"
+          },
+          { title: "Spiral Roundabouts - Which Lane", id: "6WgewaIleag" },
+          { title: "Which Exit Lane", id: "nAyVtw8Agu0" },
+          { title: "Spiral Roundabouts", id: "1vmAw74Eags" }
         ]
       }
     ]
@@ -175,21 +179,21 @@ const toolkitData = [
 
   {
     name: "Road Types",
-    icon: "🛣️",
+    icon: '<i class="fa-solid fa-road"></i>',
     topics: [
       {
         name: "Limit Points",
         videos: [
-          { title: "Limit Points – Video 1", id: "BioY8z2s20c" },
-          { title: "Limit Points – Video 2", id: "7yVqdYunYbc" },
-          { title: "Limit Points – Video 3", id: "wj7LzAZ7i7k" }
+          { title: "Limit Points", id: "BioY8z2s20c" },
+          { title: "", id: "7yVqdYunYbc" },
+          { title: "", id: "wj7LzAZ7i7k" }
         ]
       },
       {
         name: "Country Lanes",
         videos: [
-          { title: "Country Lanes – Video 1", id: "jbUmzOELyhQ" },
-          { title: "Country Lanes – Video 2", id: "gOFmR0Bp31U" }
+          { title: "Fast Narrow Roads", id: "jbUmzOELyhQ" },
+          { title: "60mph Narrow Roads", id: "gOFmR0Bp31U" }
         ]
       },
       {
@@ -201,21 +205,23 @@ const toolkitData = [
 
   {
     name: "Traffic Lights",
-    icon: "🚦",
+    icon: '<i class="fa-solid fa-traffic-light"></i>',
     topics: [
-        {
-            name: "Traffic Lights",
-            videos: [{
-    title: "Ultimate Guide to Traffic Lights",
-    id: "dJcciOp_TEQ"
-},
-            ]
-        }
+      {
+        name: "Traffic Lights",
+        videos: [
+          {
+            title: "Ultimate Guide to Traffic Lights",
+            id: "dJcciOp_TEQ"
+          }
+        ]
+      }
     ]
-}, 
-   {
+  }, 
+
+  {
     name: "Manoeuvres",
-    icon: "🅿️",
+    icon: '<i class="fa-solid fa-square-parking"></i>',
     topics: [
       {
         name: "General Manoeuvres",
@@ -230,7 +236,7 @@ const toolkitData = [
             title: "Parallel Parking – Ultimate Guide",
             id: "zn5RTfM6Db8"
           },
-          { title: "Parallel Parking – Video 2", id: "pC3N3_L7ymg" }
+          { title: "Parallel Parking", id: "pC3N3_L7ymg" }
         ]
       },
       {
@@ -239,14 +245,14 @@ const toolkitData = [
           { title: "Bay Parking – Ultimate Guide", id: "JsoXy_dRNuw" },
           { title: "Forward Bay Parking", id: "BdLaCAyv8Eg" },
           {
-            title: "Reverse Bay Parking – Video 1",
+            title: "Reverse Bay Parking",
             id: "uOojuOSUPnQ"
           },
           {
-            title: "Reverse Bay Parking – Video 2",
+            title: "",
             id: "4_RcAoE_fQs"
           },
-          { title: "Bay Parking", id: "V63paq83Gys" }
+          { title: "", id: "V63paq83Gys" }
         ]
       },
       {
@@ -257,176 +263,179 @@ const toolkitData = [
   },
 
   {
-    
     name: "Emergency Stop",
-    icon: "🚨",
+    icon: '<i class="fa-solid fa-triangle-exclamation"></i>',
     topics: [
       {
         name: "Emergency Stop",
         videos: [
           { title: "Emergency Stop", id: "c_F8VZwWw38" }
         ]
-     
       }
     ]
   },
- {
+
+  {
     name: "Tricky Areas",
-    icon: "📍",
+    icon: '<i class="fa-solid fa-location-dot"></i>',
     topics: [
-        {
-            name: "Kettering – Tricky Areas",
-  videos: [{
-  title: "Double Roundabout ",
-  type: "image",
-  url: "Double RB 1.jpg"
-},
-{
-    title: "📍 Open in Google Maps",
-    type: "link",
-    url: "https://maps.app.goo.gl/XW14MzfB24HoAaiX7?g_st=ac"
-},
-  {
-  title: "Double Roundabout (3 lanes on approach)",
-  type: "image",
-  url: "Double RB 2 (3 lanes on approach).jpg"
-},
-{
-  title: "Double Roundabout ",
-  type: "image",
-  url: "Double RB 3.jpg"
-},
-{
-  title: "Double Roundabout ",
-  type: "image",
-  url: "Double RB 4.jpg"
-  },
-{
-    title: "Spiral Roundabout",
-    type: "image",
-    url: "Spiral RB.jpg"
-   },
-{
-    title: "📍 Open in Google Maps",
-    type: "link",
-    url: "https://maps.app.goo.gl/XzFByAWGJpwS8zGC6?g_st=ac"
-},
-  { 
-    title: "Broughton",
-    type: "image",
-    url: "Broughton.jpg"
-  },
-         {
-    title: "📍 Open in Google Maps",
-    type: "link",
-    url: "https://maps.app.goo.gl/kEVR1kQT5GPNn9wP7?g_st=ac"
-},  
-{
-    title: "A14 - J7 Roundabout",
-    type: "image",
-    url: "A14 - J7 Roundabout.jpg"
-  },
-           {
-    title: "📍 Open in Google Maps - A14 J7 Roundabout",
-    type: "link",
-    url: "https://maps.app.goo.gl/9wKQ6J58o76nJYnm7?g_st=ac"
-},
-  {
-    title: "A14 - J8 Roundabout",
-    type: "image",
-    url: "A14 - J8 Roundabout.jpg"
-},
+      {
+        name: "Kettering – Tricky Areas",
+        videos: [
           {
-    title: "📍 Open in Google Maps - A14 J8 Roundabout",
-    type: "link",
-    url: "https://maps.app.goo.gl/5BmzidZDfRYvRkWXA?g_st=ac"
-   }
-]         
-  },
-    {
-  name: "Wellingborough – Tricky Areas",
-  videos: [{
-        title: "Wellingborough Crossroads",
-        type: "image",
-        url: "Wellingborough crossroads.jpg"
-},
-           {
-    title: "📍 Open in Google Maps - Wellingborough Crossroads",
-    type: "link",
-    url: "https://maps.app.goo.gl/Wh7v6H6Pxn51Qmon7?g_st=ac"
-},
-{
-    title: "Hardwater Crossing",
-    type: "image",
-    url: "Hardwater crossing.jpg"
-    },
-           {
-    title: "📍 Open in Google Maps - Hardwater Crossing",
-    type: "link",
-    url: "https://maps.app.goo.gl/EktaTJzKA4f2uc7P9?g_st=ac"
+            title: "Double Roundabout ",
+            type: "image",
+            url: "Double RB 1.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps",
+            type: "link",
+            url: "https://maps.app.goo.gl/XW14MzfB24HoAaiX7?g_st=ac"
+          },
+          {
+            title: "Double Roundabout (3 lanes on approach)",
+            type: "image",
+            url: "Double RB 2 (3 lanes on approach).jpg"
+          },
+          {
+            title: "Double Roundabout ",
+            type: "image",
+            url: "Double RB 3.jpg"
+          },
+          {
+            title: "Double Roundabout ",
+            type: "image",
+            url: "Double RB 4.jpg"
+          },
+          {
+            title: "Spiral Roundabout",
+            type: "image",
+            url: "Spiral RB.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps",
+            type: "link",
+            url: "https://maps.app.goo.gl/XzFByAWGJpwS8zGC6?g_st=ac"
+          },
+          { 
+            title: "Broughton",
+            type: "image",
+            url: "Broughton.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps",
+            type: "link",
+            url: "https://maps.app.goo.gl/kEVR1kQT5GPNn9wP7?g_st=ac"
+          },  
+          {
+            title: "A14 - J7 Roundabout",
+            type: "image",
+            url: "A14 - J7 Roundabout.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps - A14 J7 Roundabout",
+            type: "link",
+            url: "https://maps.app.goo.gl/9wKQ6J58o76nJYnm7?g_st=ac"
+          },
+          {
+            title: "A14 - J8 Roundabout",
+            type: "image",
+            url: "A14 - J8 Roundabout.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps - A14 J8 Roundabout",
+            type: "link",
+            url: "https://maps.app.goo.gl/5BmzidZDfRYvRkWXA?g_st=ac"
+          }
+        ]         
+      },
+      {
+        name: "Wellingborough – Tricky Areas",
+        videos: [
+          {
+            title: "Wellingborough Crossroads",
+            type: "image",
+            url: "Wellingborough crossroads.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps - Wellingborough Crossroads",
+            type: "link",
+            url: "https://maps.app.goo.gl/Wh7v6H6Pxn51Qmon7?g_st=ac"
+          },
+          {
+            title: "Hardwater Crossing",
+            type: "image",
+            url: "Hardwater crossing.jpg"
+          },
+          {
+            title: "📍 Open in Google Maps - Hardwater Crossing",
+            type: "link",
+            url: "https://maps.app.goo.gl/EktaTJzKA4f2uc7P9?g_st=ac"
+          }
+        ]
       }
-      ]
-}
-]
-},       
+    ]
+  },       
+
   {
     name: "Mindset and Test Nerves",
-    icon: "👨‍🏫",
+    icon: '<i class="fa-solid fa-brain"></i>',
     topics: [
-           {
+      {
         name: "Thoughts and Feelings",
         videos: [
           { title: "Anxiety – Video 1", id: "wiNdXiZzPPA" },
           { title: "Anxiety – Video 2", id: "0yKXFrpGAM8" },
           { title: "Anxiety – Video 3", id: "IoLPvEc-0IQ" },
           { title: "Anxiety – Video 4", id: "kFxO0fEJLmA" }
-       
         ]
       }
     ]
   },
- { 
-     name: "Driving Test",
-    icon: "📋",
+
+  { 
+    name: "Driving Test",
+    icon: '<i class="fa-solid fa-clipboard-check"></i>',
     topics: [
       {
         name: "Show Me, Tell Me",
         videos: [
-      {
-        title: "Show Me, Tell Me" ,
-        id: "uh8slnP76-w"
+          {
+            title: "Show Me, Tell Me",
+            id: "uh8slnP76-w"
           }
         ]
       },
-     { 
+      { 
         name: "Independent Driving",
         videos: [
           {
             title: "Using a Sat Nav on the Driving Test",
             id: "SaapXrhuEp8"
-   }
+          }
         ]
       }
     ]
   },
- {
-  name: "GDE Matrix",
-  icon: "📋",
-  topics: [
-    {
-      name: "GDE Matrix",
-      videos: [
-        {
-          title: "GDE Matrix",
-          type: "image",
-          url: "GDE Matrix.jpg"
-        },
-        {
-          title: "GDE Matrix Explained",
-          id: "Qck7EyKOFjw"
-    }
-  ]
-}
-  ]
- }     
+
+  {
+    name: "GDE Matrix",
+    icon: '<i class="fa-solid fa-table-cells"></i>',
+    topics: [
+      {
+        name: "GDE Matrix",
+        videos: [
+          {
+            title: "GDE Matrix",
+            type: "image",
+            url: "GDE Matrix.jpg"
+          },
+          {
+            title: "GDE Matrix Explained",
+            id: "Qck7EyKOFjw"
+          }
+        ]
+      }
+    ]
+  }     
 ];
