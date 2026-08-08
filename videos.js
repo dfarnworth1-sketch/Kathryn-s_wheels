@@ -78,7 +78,6 @@ const toolkitData = [
             title: "Ultimate Guide to Moving Off and Stopping",
             id: "D1Gt_X-oyU0"
           },
-          { title: "Moving Off and Stopping", id: "D1Gt_X-oyU0" },
           {
             title: "Avoiding and Recovering from a Stall",
             id: "dze2UWGT11k"
