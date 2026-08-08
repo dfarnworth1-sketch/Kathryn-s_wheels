@@ -391,9 +391,9 @@ const toolkitData = [
       {
         name: "Thoughts and Feelings",
         videos: [
-          { title: "Anxiety – Video 2", id: "0yKXFrpGAM8" },
-          { title: "Anxiety – Video 1", id: "wiNdXiZzPPA" },
-          { title: "Anxiety – Video 4", id: "kFxO0fEJLmA" }
+          { title: "How to Overcome Driving Anxiety - Positive Feedback Loop", id: "0yKXFrpGAM8" },
+          { title: "Overcoming Driving Anxiety Part 2 - Six Common Causes for Learners and Experienced Drivers", id: "wiNdXiZzPPA" },
+          { title: "Test Nerves? Do This", id: "kFxO0fEJLmA" }
         ]
       },
       {
