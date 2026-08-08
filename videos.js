@@ -274,7 +274,10 @@ const toolkitData = [
       {
         name: "Emergency Stop",
         videos: [
-          { title: "Emergency Stop", id: "c_F8VZwWw38" }
+          {
+            title: "Emergency Stop",
+            id: "ykQX3ZYyFhc"
+          }
         ]
       }
     ]
