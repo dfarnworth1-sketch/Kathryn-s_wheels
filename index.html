@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Kathryn's Learner Driver Toolkit</title>
+  <title>Dave's Learner Driver Toolkit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -187,6 +187,122 @@
     @media (max-width: 600px) {
       .category-card .category-icon i {
         font-size: 36px;
+      }
+    }
+
+
+    /* ===== NUMBER 3: SPACING, CORNERS & SHADOWS ===== */
+
+    .category-grid {
+      gap: 20px;
+    }
+
+    .category-card {
+      min-height: 145px;
+      padding: 26px 22px;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.22);
+    }
+
+    .category-card:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 12px rgba(15, 23, 42, 0.16);
+    }
+
+    .category-card .category-icon {
+      margin-bottom: 2px;
+    }
+
+    .category-card .category-name {
+      max-width: 220px;
+      line-height: 1.18;
+    }
+
+    @media (max-width: 600px) {
+      .category-grid {
+        gap: 14px;
+      }
+
+      .category-card {
+        min-height: 116px;
+        padding: 22px 18px;
+        border-radius: 16px;
+      }
+    }
+
+
+    /* ===== NUMBER 5: INSIDE PAGE CARDS + HEADER CENTRING ===== */
+
+    header p {
+      text-align: center;
+    }
+
+    .topic-grid {
+      gap: 16px;
+    }
+
+    .topic-button {
+      position: relative;
+      min-height: 88px;
+      padding: 18px 52px 18px 20px;
+      border-radius: 14px;
+      background: #2563eb;
+      text-align: left;
+      box-shadow: 0 5px 14px rgba(37, 99, 235, 0.18);
+    }
+
+    .topic-button::after {
+      content: "\f054";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .topic-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 18px rgba(37, 99, 235, 0.22);
+    }
+
+    .topic-button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+    }
+
+    .topic-button.empty {
+      background: #64748b;
+      opacity: 0.82;
+      box-shadow: none;
+    }
+
+    .topic-button.empty::after {
+      content: "\f068";
+      opacity: 0.55;
+    }
+
+    @media (max-width: 600px) {
+      .topic-grid {
+        gap: 12px;
+      }
+
+      .topic-button {
+        min-height: 76px;
+        padding: 16px 46px 16px 18px;
+        border-radius: 13px;
+        font-size: 19px;
+      }
+
+      .topic-button::after {
+        right: 17px;
       }
     }
 
@@ -415,7 +531,7 @@
     >
 
       <header>
-        <h1>Kathryn's Learner Driver Toolkit</h1>
+        <h1>Dave's Learner Driver Toolkit</h1>
 
         <p>
           Teaching videos and resources for use during lessons.
@@ -443,7 +559,7 @@
         class="back-button"
         onclick="showHome()"
       >
-        ← Back to Kathryn's Learner Driver Toolkit
+        ← Back to Dave's Learner Driver Toolkit
       </button>
 
       <div class="page-panel">
