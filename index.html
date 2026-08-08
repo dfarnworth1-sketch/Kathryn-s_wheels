@@ -9,8 +9,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Dave's Learner Driver Toolkit</title>
+  <title>Kathryn's Learner Driver Toolkit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -236,73 +239,77 @@
     }
 
 
-    /* ===== NUMBER 5: INSIDE PAGE CARDS + HEADER CENTRING ===== */
+    /* ===== NUMBER 4: PROFESSIONAL APP HEADER ===== */
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 30px 24px 26px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 72px;
+      height: 4px;
+      border-radius: 999px;
+      background: #2563eb;
+      transform: translateX(-50%);
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 14px;
+      border-radius: 18px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 30px;
+      box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.12);
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -0.8px;
+    }
 
     header p {
-      text-align: center;
-    }
-
-    .topic-grid {
-      gap: 16px;
-    }
-
-    .topic-button {
-      position: relative;
-      min-height: 88px;
-      padding: 18px 52px 18px 20px;
-      border-radius: 14px;
-      background: #2563eb;
-      text-align: left;
-      box-shadow: 0 5px 14px rgba(37, 99, 235, 0.18);
-    }
-
-    .topic-button::after {
-      content: "\f054";
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    .topic-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 9px 18px rgba(37, 99, 235, 0.22);
-    }
-
-    .topic-button:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
-    }
-
-    .topic-button.empty {
-      background: #64748b;
-      opacity: 0.82;
-      box-shadow: none;
-    }
-
-    .topic-button.empty::after {
-      content: "\f068";
-      opacity: 0.55;
+      max-width: 620px;
+      margin: 0 auto;
+      color: #64748b;
+      font-size: 17px;
+      line-height: 1.55;
     }
 
     @media (max-width: 600px) {
-      .topic-grid {
-        gap: 12px;
+      header {
+        padding: 24px 18px 22px;
+        border-radius: 18px;
       }
 
-      .topic-button {
-        min-height: 76px;
-        padding: 16px 46px 16px 18px;
-        border-radius: 13px;
-        font-size: 19px;
+      .brand-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+        font-size: 27px;
       }
 
-      .topic-button::after {
-        right: 17px;
+      header h1 {
+        font-size: 31px;
+      }
+
+      header p {
+        font-size: 16px;
       }
     }
 
@@ -518,6 +525,293 @@
         min-height: 100px;
       }
     }
+
+    /* ===== NUMBER 5 FINAL OVERRIDES ===== */
+
+    /* Keep the subtitle centred on desktop and mobile */
+    header p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center !important;
+    }
+
+    /* More polished subject/topic cards */
+    .topic-grid {
+      gap: 18px;
+    }
+
+    .topic-button {
+      position: relative;
+      min-height: 90px;
+      padding: 20px 54px 20px 22px;
+      border-radius: 14px;
+      text-align: left;
+      background: #2563eb;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.20);
+    }
+
+    .topic-button::after {
+      content: "\f054";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 17px;
+      opacity: 0.9;
+    }
+
+    .topic-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
+    }
+
+    .topic-button.empty {
+      background: #64748b;
+      opacity: 0.82;
+      box-shadow: none;
+    }
+
+    .topic-button.empty::after {
+      content: "\f068";
+      opacity: 0.55;
+    }
+
+    @media (max-width: 600px) {
+      .topic-grid {
+        gap: 12px;
+      }
+
+      .topic-button {
+        min-height: 78px;
+        padding: 17px 48px 17px 18px;
+        font-size: 19px;
+      }
+
+      .topic-button::after {
+        right: 17px;
+      }
+    }
+
+
+    /* ===== NUMBER 6: TYPOGRAPHY + RESOURCE CARD REDESIGN ===== */
+
+    body,
+    .category-card,
+    .topic-button,
+    .back-button,
+    .resource-link {
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .video-card {
+      margin-bottom: 24px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 7px 20px rgba(15, 23, 42, 0.09);
+    }
+
+    .video-card h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: #0f172a;
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .resource-title-icon {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 16px;
+    }
+
+    .resource-title-icon.pdf {
+      background: #fef2f2;
+      color: #dc2626;
+    }
+
+    .resource-title-icon.doc {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    .resource-title-icon.image {
+      background: #f0fdfa;
+      color: #0f766e;
+    }
+
+    .resource-title-icon.link {
+      background: #f5f3ff;
+      color: #6d28d9;
+    }
+
+    .resource-title-icon.video-icon {
+      background: #fff7ed;
+      color: #b45309;
+    }
+
+    .video {
+      border-radius: 14px;
+      box-shadow: 0 5px 16px rgba(15, 23, 42, 0.16);
+    }
+
+    .resource-link {
+      margin-top: 2px;
+      border-radius: 11px;
+      font-weight: 700;
+    }
+
+    .resource-image {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 5px 16px rgba(15, 23, 42, 0.10);
+    }
+
+    .website-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: #6d28d9;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(109, 40, 217, 0.20);
+    }
+
+    .website-link:hover {
+      filter: brightness(1.06);
+    }
+
+    @media (max-width: 600px) {
+      .video-card {
+        padding: 15px;
+        border-radius: 16px;
+      }
+
+      .video-card h2 {
+        gap: 9px;
+        font-size: 19px;
+      }
+
+      .resource-title-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        font-size: 14px;
+      }
+    }
+
+
+    /* ===== FINAL INTERFACE UPDATE: NAVIGATION + CATEGORY HEADINGS ===== */
+
+    .navigation-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .navigation-row .back-button {
+      margin-bottom: 0;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 11px;
+      background: #2563eb;
+      color: white;
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 14px rgba(37, 99, 235, 0.18);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    }
+
+    .home-button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+    }
+
+    .category-heading-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .category-heading-icon {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 23px;
+    }
+
+    .category-heading-wrap .page-heading {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      .navigation-row {
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .navigation-row .back-button,
+      .home-button {
+        padding: 11px 14px;
+        font-size: 15px;
+      }
+
+      .category-heading-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 20px;
+      }
+
+      .category-heading-wrap {
+        gap: 11px;
+      }
+    }
+
   </style>
 </head>
 
@@ -531,10 +825,14 @@
     >
 
       <header>
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-car-side"></i>
+        </div>
+
         <h1>Dave's Learner Driver Toolkit</h1>
 
         <p>
-          Teaching videos and resources for use during lessons.
+          Videos, guides and resources to support your driving lessons.
         </p>
       </header>
 
@@ -555,19 +853,31 @@
       class="screen"
     >
 
-      <button
-        class="back-button"
-        onclick="showHome()"
-      >
-        ← Back to Dave's Learner Driver Toolkit
-      </button>
+      <div class="navigation-row">
+        <button
+          class="back-button"
+          onclick="showHome()"
+        >
+          ← Back
+        </button>
+
+        <button
+          class="home-button"
+          onclick="showHome()"
+        >
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+      </div>
 
       <div class="page-panel">
 
-        <h1
-          id="category-heading"
-          class="page-heading"
-        ></h1>
+        <div class="category-heading-wrap">
+          <span id="category-heading-icon" class="category-heading-icon"></span>
+          <h1
+            id="category-heading"
+            class="page-heading"
+          ></h1>
+        </div>
 
         <div
           id="topic-grid"
@@ -584,12 +894,21 @@
       class="screen"
     >
 
-      <button
-        class="back-button"
-        onclick="showCurrentCategory()"
-      >
-        ← Back to subjects
-      </button>
+      <div class="navigation-row">
+        <button
+          class="back-button"
+          onclick="showCurrentCategory()"
+        >
+          ← Back to subjects
+        </button>
+
+        <button
+          class="home-button"
+          onclick="showHome()"
+        >
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+      </div>
 
       <div class="page-panel">
 
@@ -635,8 +954,11 @@
 
       const category = toolkitData[categoryIndex];
 
-     document.getElementById("category-heading").innerHTML =
-  category.icon + " " + category.name;
+      document.getElementById("category-heading").textContent =
+        category.name;
+
+      document.getElementById("category-heading-icon").innerHTML =
+        category.icon;
 
       const topicGrid =
         document.getElementById("topic-grid");
@@ -703,69 +1025,79 @@
 
           if (resource.type === "pdf") {
 
-    card.innerHTML = `
-        <h2>📄 ${resource.title}</h2>
+            card.innerHTML = `
+              <h2>
+                <span class="resource-title-icon pdf"><i class="fa-solid fa-file-pdf"></i></span>
+                ${resource.title}
+              </h2>
 
-        <a class="resource-link"
-           href="${resource.url}"
-           target="_blank">
-           Open PDF
-        </a>
-    `;
+              <a class="resource-link"
+                 href="${resource.url}"
+                 target="_blank">
+                 Open PDF
+              </a>
+            `;
 
-} else if (resource.type === "doc") {
+          } else if (resource.type === "doc") {
 
-    card.innerHTML = `
-        <h2>📄 ${resource.title}</h2>
+            card.innerHTML = `
+              <h2>
+                <span class="resource-title-icon doc"><i class="fa-solid fa-file-word"></i></span>
+                ${resource.title}
+              </h2>
 
-        <a class="resource-link"
-           href="${resource.url}"
-           target="_blank">
-           Open Document
-        </a>
-    `;
+              <a class="resource-link"
+                 href="${resource.url}"
+                 target="_blank">
+                 Open Document
+              </a>
+            `;
 
-} else if (resource.type === "image") {
+          } else if (resource.type === "image") {
 
-  card.innerHTML = `
-    <h2>🖼️ ${resource.title}</h2>
+            card.innerHTML = `
+              <h2>
+                <span class="resource-title-icon image"><i class="fa-solid fa-image"></i></span>
+                ${resource.title}
+              </h2>
 
-    <img
-      src="${resource.url}"
-      alt="${resource.title}"
-      style="width:100%; max-width:800px; display:block; margin:0 auto; border-radius:12px;"
-    >
-  `;
+              <img
+                class="resource-image"
+                src="${resource.url}"
+                alt="${resource.title}"
+              >
+            `;
 
-}
+          } else if (resource.type === "link") {
 
-else if (resource.type === "link") {
+            card.innerHTML = `
+              <h2>
+                <span class="resource-title-icon link"><i class="fa-solid fa-link"></i></span>
+                ${resource.title}
+              </h2>
 
-    card.innerHTML = `
-        <h2>🔗 ${resource.title}</h2>
-        <p>
-            <a href="${resource.url}" target="_blank">
+              <a class="website-link" href="${resource.url}" target="_blank">
                 Open Website
-            </a>
-        </p>
-    `;
+              </a>
+            `;
 
-}
+          } else {
 
-else {
+            card.innerHTML = `
+              <h2>
+                <span class="resource-title-icon video-icon"><i class="fa-solid fa-play"></i></span>
+                ${resource.title}
+              </h2>
 
-    card.innerHTML = `
-        <h2>${resource.title}</h2>
-
-        <div class="video">
-            <iframe
-                src="https://www.youtube.com/embed/${resource.id}"
-                title="${resource.title}"
-                allowfullscreen>
-            </iframe>
-        </div>
-    `;
-}
+              <div class="video">
+                <iframe
+                  src="https://www.youtube.com/embed/${resource.id}"
+                  title="${resource.title}"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            `;
+          }
           videoList.appendChild(card);
         });
       }
