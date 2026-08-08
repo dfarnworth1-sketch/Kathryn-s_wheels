@@ -9,7 +9,8 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Kathryn's Learner Driver Toolkit</title>
+  <title>Dave's Learner Driver Toolkit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -383,6 +384,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -395,7 +397,7 @@
     >
 
       <header>
-        <h1>Kathryn's Learner Driver Toolkit</h1>
+        <h1>Dave's Learner Driver Toolkit</h1>
 
         <p>
           Teaching videos and resources for use during lessons.
@@ -423,7 +425,7 @@
         class="back-button"
         onclick="showHome()"
       >
-        ← Back to Kathryn's Learner Driver Toolkit
+        ← Back to Dave's Learner Driver Toolkit
       </button>
 
       <div class="page-panel">
@@ -499,10 +501,8 @@
 
       const category = toolkitData[categoryIndex];
 
-      document.getElementById(
-        "category-heading"
-      ).textContent =
-        category.icon + " " + category.name;
+     document.getElementById("category-heading").innerHTML =
+  category.icon + " " + category.name;
 
       const topicGrid =
         document.getElementById("topic-grid");
@@ -656,8 +656,8 @@ else {
 
         button.className = "category-card";
 
-        button.textContent =
-          category.icon + " " + category.name;
+        button.innerHTML =
+  category.icon + " " + category.name;
 
         button.onclick = function () {
           showCategory(index);
