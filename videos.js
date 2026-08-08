@@ -396,6 +396,16 @@ const toolkitData = [
           { title: "Anxiety – Video 3", id: "IoLPvEc-0IQ" },
           { title: "Anxiety – Video 4", id: "kFxO0fEJLmA" }
         ]
+      },
+      {
+        name: "Managing Driving Test Nerves",
+        videos: [
+          {
+            title: "Managing Driving Test Nerves",
+            type: "link",
+            url: "https://readytopass.campaign.gov.uk/driving-test-nerves/"
+          }
+        ]
       }
     ]
   },
