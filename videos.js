@@ -391,9 +391,8 @@ const toolkitData = [
       {
         name: "Thoughts and Feelings",
         videos: [
-          { title: "Anxiety – Video 1", id: "wiNdXiZzPPA" },
           { title: "Anxiety – Video 2", id: "0yKXFrpGAM8" },
-          { title: "Anxiety – Video 3", id: "IoLPvEc-0IQ" },
+          { title: "Anxiety – Video 1", id: "wiNdXiZzPPA" },
           { title: "Anxiety – Video 4", id: "kFxO0fEJLmA" }
         ]
       },
