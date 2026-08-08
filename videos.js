@@ -147,6 +147,7 @@ const toolkitData = [
   {
     name: "Roundabouts",
     icon: '<i class="fa-solid fa-arrows-rotate"></i>',
+    directOpen: true,
     topics: [
       {
         name: "Roundabouts",
