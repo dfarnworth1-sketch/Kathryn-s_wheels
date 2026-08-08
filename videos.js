@@ -451,8 +451,9 @@ const toolkitData = [
   },
 
   {
-    name: "GDE Matrix",
+    name: "Goals for Driver Education",
     icon: '<i class="fa-solid fa-table-cells"></i>',
+    directOpen: true,
     topics: [
       {
         name: "GDE Matrix",
